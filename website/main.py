@@ -3,10 +3,11 @@ from flask_socketio import SocketIO
 import time
 from application import create_app  # use of local package called application
 from application.database import DataBase # use of local package called application
-import config
+#import config
 
 app = create_app()
-socketio = SocketIO(app)
+#socketio = SocketIO(app)
+'''
 
 #@socketio.on('event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
@@ -26,3 +27,4 @@ handle_my_custom_event = socketio.on('event')(handle_my_custom_event)
 
 if __name__ == "__main__":
     pass
+'''
