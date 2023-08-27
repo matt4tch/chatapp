@@ -6,10 +6,9 @@ from application.database import DataBase # use of local package called applicat
 #import config
 
 app = create_app()
-#socketio = SocketIO(app)
-'''
+socketio = SocketIO(app)
 
-#@socketio.on('event')
+@socketio.on('event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
     """
     handles saving messages once received from web server and
@@ -23,8 +22,5 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
         db = DataBase()
         db.save_message(data["name"], data["message"])
 
-handle_my_custom_event = socketio.on('event')(handle_my_custom_event)
-
 if __name__ == "__main__":
-    pass
-'''
+    socketio.run(app)

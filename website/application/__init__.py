@@ -8,4 +8,6 @@ def create_app():
     app.config.from_object('config.Config')
 
     with app.app_context():
-        # Imports
+        from .views import view
+        app.register_blueprint(view)
+        return app
