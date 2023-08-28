@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template, request, session, url_for, redirect
+from flask import Flask, Blueprint, render_template, request, session, url_for, redirect, flash
 
 view = Blueprint("views", __name__)
 
@@ -13,6 +13,10 @@ def login():
     """displays main login page and handles saving name in the session"""
     if request.method == "POST":
         name = request.form["intputName"]
+        if len(name) >= 2:
+            session[NAME_KEY] = name
+            flash(f"You were successfully logged in as {name}.")
+            
 
 
 @view.route("/")
