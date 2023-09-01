@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block logout %}
+<a class="nav-item nav-link" href="{{ url_for('views.logout') }}">Logout</a>
+{% endblock %}
+
+{% block content %}
+<div>This is the message block.</div>
+
+{% endblock %}  

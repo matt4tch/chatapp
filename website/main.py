@@ -23,4 +23,4 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
         db.save_message(data["name"], data["message"])
 
 if __name__ == "__main__":
-    socketio.run(app)
+    socketio.run(app, debug=config.Config.DEBUG)
