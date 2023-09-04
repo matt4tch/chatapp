@@ -1,0 +1,20 @@
+.parent {
+    position: relative;
+    height: 200vh;
+}
+
+.first {
+    position: static;
+    margin: 0px;
+}
+
+.second {
+    position: static;
+    margin: 0px;
+}  
+
+.third {
+    position: relative;
+    margin: 0px;
+    top: 0px;
+}

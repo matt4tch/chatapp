@@ -1,9 +1,33 @@
 {% extends "base.html" %}
-{% block logout %}
+
+{% block log %}
 <a class="nav-item nav-link" href="{{ url_for('views.logout') }}">Logout</a>
+{% endblock %}  
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="../static/css/index.css">
 {% endblock %}
 
 {% block content %}
-<div>This is the message block.</div>
+
+<div class="row" style="padding-top:10px;" >
+    <div class="col"><hr></div>
+    <div class="col-auto"><p class="h3" text-align="center">Start Chatting</p></div>
+    <div class="col"><hr></div>
+</div>
+
+<div class="container">
+    <div id="messages" class="overflow-auto msgs">
+        <!-- For js message insertion-->
+    </div>
+    <form id="msgForm" action="" method="POST" class="send-layout">
+        <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Message" aria-label="Message" id="msg">
+              <div class="input-group-append">
+                <button class="btn btn-success" type="submit" id="sendBtn">Send</button>
+              </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}  

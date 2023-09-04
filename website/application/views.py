@@ -18,12 +18,12 @@ def login():
             flash(f"You were successfully logged in as {name}.")
             return render_template("index.html", **{"session": session})
         else:
-            flash(f"Your Name must be longer than one character.")
+            flash(f"Your name must be longer than one character.")
     return render_template("login.html", **{"session": session})
 
 
-@view.route("/")
-@view.route("/home")
+@view.route("/", methods=["POST", "GET"])
+@view.route("/home", methods=["POST", "GET"])
 def home():
     """displays home page if logged in"""
     if NAME_KEY not in session:
@@ -32,9 +32,10 @@ def home():
 
 @view.route("/history")
 def history():
-    return "History Template Not Built Yet"
+    return render_template("history.html", **{"session": session})
 
 @view.route('/logout')
 def logout():
     session.pop(NAME_KEY, None)
+    flash("You were logged out.")
     return redirect(url_for("views.login"))

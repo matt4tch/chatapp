@@ -4,13 +4,11 @@
 <link rel="stylesheet" type="text/css" href="../static/css/login.css">
 {% endblock %}
 
-{% block content %} 
+{% block log %}
+<a class="nav-item nav-link" href="{{ url_for('views.login') }}">Login</a>
+{% endblock %}
 
-{% for msg in get_flashed_messages() %}
-<div class="alert alert-dark" role="alert">
-    {{ msg }}
-</div>
-{% endfor %}
+{% block content %} 
 
 <div class="login-page">
     <form class="login-form shadow p-3 mb-5 pb-3 pt-3 bg-white rounded" action="#" method="POST">

@@ -1,0 +1,22 @@
+.msg_box {
+    background-color: #eee;
+}
+
+#msgForm {
+    margin: 0% 0% 0% 0%;
+    bottom:0;   
+}
+
+#messages {
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.msgs {
+    opacity: 0.6;
+    background-color: #E8E8E8;
+    border-radius: 2px;
+    border: solid;
+    border-color: black;
+    margin-bottom: 5px;
+}
