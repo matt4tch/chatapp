@@ -16,7 +16,7 @@ def login():
         if len(name) >= 2:
             session[NAME_KEY] = name
             flash(f"You were successfully logged in as {name}.")
-            return render_template("index.html", **{"session": session})
+            return redirect(url_for("views.home"))
         else:
             flash(f"Your name must be longer than one character.")
     return render_template("login.html", **{"session": session})
