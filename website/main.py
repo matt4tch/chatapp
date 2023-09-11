@@ -6,7 +6,7 @@ from application.database import DataBase # use of local package called applicat
 import config
 
 app = create_app()
-socketio = SocketIO(app)
+socketio = SocketIO(app) # SocketIO connects to the server
 
 @socketio.on('event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
