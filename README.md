@@ -1,4 +1,6 @@
-## Preface/Project Story: ##
+# Chat-Web-App
+
+## Preface/Project Story:
 I am in the process of learning web development by creating a Chat Application from scratch, rather than
 by taking courses on the subject, although I am following tutorials and researching a lot along the way as 
 I discover new features that need to be implemented.
@@ -25,10 +27,7 @@ and modified some HTMl code, but realized that I do not have a solid enough back
 why I encounter the errors I encounter, for example, my JavaScript based changes in HTML not reflecting in the browser upon submitting a form, which I might utilize Ajax to solve.
 
 Throughout the course of the project so far, the biggest thing I have learned was how to step outside of my comfort zone and
-experiment with technologies that I have never used before, rather than taking the safe path (which I fell into the trap of doing before) of only using technologies that I fully understood and convincing myself that in order to use something new, I have to first understand it deeply. However, using the approach that I am currently taking, I am actually learning more because I am constantly trying to solve bugs and fix errors I have never seen before and through practice, I become more effective in problem-solving. 
-
-# Chat-Web-App
-
+experiment with technologies that I have never used before, rather than taking the safe path (which I fell into the trap of doing before) of only using technologies that I fully understood and convincing myself that in order to use something new, I have to first understand it deeply. However, using the approach that I am currently taking, I am actually learning more because I am constantly trying to solve bugs and fix errors I have never seen before and through practice, I become more effective in problem-solving.
 ## Setup
 
 Ensure you have python 3.11.1+ installed. 
@@ -42,4 +41,10 @@ pip install -r requirements.txt
 ```bash
 cd website
 python main.py
+```
+
+## Deleting Message History
+
+```bash
+rm messages.db
 ```
