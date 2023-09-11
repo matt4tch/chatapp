@@ -69,4 +69,3 @@ class DataBase:
         :return: None
         """
         self.conn.close()
-        

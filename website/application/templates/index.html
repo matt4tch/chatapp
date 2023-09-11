@@ -30,16 +30,4 @@
     </form>
 </div>
 
-<script>
-    let sendForm = document.getElementById("msgForm");
-    let pasteTo = document.getElementById('messages');
-
-    function send_message() {
-        let msgContent = document.getElementById('msg').value;
-        pasteTo.innerHTML += "<p>" + msgContent + "</p>";
-    }
-
-    sendForm.addEventListener("submit", send_message);
-</script>
-
 {% endblock %}  

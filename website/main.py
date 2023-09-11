@@ -15,12 +15,13 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
     sending message to other clients
     :param json: json
     :param methods: POST GET
-    :return: None
+    :return: None   
     """
     data = dict(json)
     if "name" in data:
         db = DataBase()
         db.save_message(data["name"], data["message"])
+    socketio.emit('message response', json)
 
 if __name__ == "__main__":
     socketio.run(app, debug=config.Config.DEBUG)
